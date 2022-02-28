@@ -1,4 +1,5 @@
 import java.io.*;
+import java.util.Locale;
 
 public class Main {
 
@@ -26,5 +27,14 @@ public class Main {
             }
         }
         System.out.println(str2);
+        StringBuilder str3=new StringBuilder(str2);
+        str3.setCharAt(0,(char)(str3.charAt(0)-32));
+        for (i=1;i< str3.length();i++)
+        {
+            if(str3.charAt(i)==' ') {
+                str3.setCharAt(i+1,(char)(str3.charAt(i+1)-32));
+            }
+        }
+        System.out.println(str3);
     }
 }
